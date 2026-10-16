@@ -1,0 +1,15 @@
+你是一名资深 LLM Agent 架构师兼求职辅导顾问。请实时检索 GitHub，帮我筛选【AI 智能客服 Agent】的高质量开源仓库供我学习（我准备国内 Agent 开发岗，主用 Python，有 PDF 文档解析/RAG 基础）。只给可验证的真实仓库（附链接、star 数、最近一次提交时间），不要凭记忆编造。结果整理成结构清晰的 Markdown 文档。
+
+要求：
+- 目标 4 个，按「复杂度从低到高」排序；宁缺毋滥，找不到就如实说明、给实际数量，不要凑数。
+- 框架：优先基于 LangChain / LangGraph（尤其含 LangGraph 有状态工作流 / 多 Agent 编排）的真实客服应用；不要以 Rasa / Semantic Kernel / AutoGen / CrewAI 等为主的项目，也不要通用框架仓库本身。
+- 性质：必须是有完整业务逻辑、可运行的真实客服 Agent（至少含 RAG 或工具调用），排除单轮意图分类 demo、纯聊天机器人，以及教学/课程/教程类仓库（如 datawhalechina 课程）。
+- 维护活跃度：优先最近一年内有维护/提交记录的仓库；若满足其他条件的仓库不足，可适当放宽此项，但需注明最近提交时间。
+- star 数为首要排序参考，越高越优先，但不设最低阈值、不因 star 低而排除其他方面达标的优质仓库。
+- 排除已看过的仓库：datawhalechina/hello-agents、liangdabiao/langgraph_multi-agent、liangdabiao/SKILL-kefu、openai/openai-cs-agents-demo。
+
+判断相关性的参考（招聘要求要点）：LLM 客服 Agent（意图理解、多轮对话、自主解答、工单自主处理、自我纠错反思）；对话记忆、用户问题拆解、场景化工具调用（工单/订单/退款/知识库检索等 Function Calling）、Prompt 工程、多 Agent 协同、ReAct/CoT；客服场景 RAG（私有 FAQ/售后规则/业务流程，解决答非所问、幻觉）；LangChain/LangGraph 编排对接工单/订单/会员系统实现端到端闭环；工程化与性能优化（高并发、延迟、Token、长对话稳定、可监控可调试）；效果评估体系。
+
+每个仓库输出：仓库名+链接+主语言+star 数+最近提交时间；一句话定位；是否基于 LangChain/LangGraph（及具体用法）；可观测性（tracing/日志/指标/Token监控，如 LangSmith/LangFuse）与可评估性（eval 数据集/指标/回归）是否具备、怎么实现，无则写"缺"；能力覆盖（对照下列清单标注命中/缺失，不要求全覆盖）：查询理解/转述、多轮状态/记忆、意图分类+情绪识别+低置信澄清、检索增强、工具调用与业务办理、结构化建单+人工交接、LangChain/LangGraph 编排与多 Agent、可观测性、可评估性、ReAct/CoT/reflection；四维简评（①质量热度 ②与招聘要求相关性 ③企业级客服契合度 ④学习难度）；学习价值与「重点读哪部分源码」建议。
+
+文档最后附【学习顺序建议】：为什么这么排、每个仓库重点掌握的一个核心概念、以及如何对应上面招聘要求（尤其 LangChain/LangGraph 编排与可观测/可评估两点），便于我面试讲清楚。

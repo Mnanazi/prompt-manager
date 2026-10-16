@@ -1,0 +1,12 @@
+# 编辑器/临时
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# 系统
+Thumbs.db
+
+# 本地覆盖（如你后面写 loader，可能加 .env）
+.env
